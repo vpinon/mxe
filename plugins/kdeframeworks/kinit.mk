@@ -1,7 +1,7 @@
 # This file is part of MXE. See LICENSE.md for licensing information.
 PKG             := kinit
-$(PKG)_VERSION  := 5.50.0
-$(PKG)_CHECKSUM  := 912c278141c30b4123c39773117971a4f8bdc1b3fc82061bb36dea80daa6ead1
+$(PKG)_VERSION  := 5.62.0
+$(PKG)_CHECKSUM  := 5c4b066362ab6528b5c9ac654c20cc4eeed87e5384b26b3aa1df968c98c1e21a
 $(PKG)_SUBDIR   := $(PKG)-$($(PKG)_VERSION)
 $(PKG)_FILE     := $(PKG)-$($(PKG)_VERSION).tar.xz
 $(PKG)_HOME     := https://download.kde.org/stable/frameworks

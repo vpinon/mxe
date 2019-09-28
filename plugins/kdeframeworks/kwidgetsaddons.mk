@@ -1,7 +1,7 @@
 # This file is part of MXE. See LICENSE.md for licensing information.
 PKG             := kwidgetsaddons
-$(PKG)_VERSION  := 5.50.0
-$(PKG)_CHECKSUM  := 9530ef4e578859e4dcd1a34f396e552221cbc33fa9f9cb9b1c60ca5dc20a6d7b
+$(PKG)_VERSION  := 5.62.0
+$(PKG)_CHECKSUM  := 3a8e75d544783a1f567016f2669c3cfdbf2809b0a3d25afd03d38af62a493671
 $(PKG)_SUBDIR   := $(PKG)-$($(PKG)_VERSION)
 $(PKG)_FILE     := $(PKG)-$($(PKG)_VERSION).tar.xz
 $(PKG)_HOME     := https://download.kde.org/stable/frameworks

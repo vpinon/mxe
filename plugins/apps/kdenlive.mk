@@ -1,8 +1,8 @@
 # This file is part of MXE. See LICENSE.md for licensing information.
 
 PKG             := kdenlive
-$(PKG)_VERSION  := 18.08.0
-$(PKG)_CHECKSUM := 43247d070e6898c26271235b915b45422ee8668e512f38f6df711e5571dca019
+$(PKG)_VERSION  := 19.08.1
+$(PKG)_CHECKSUM := 0d19c0d24e16518fd3b57eddffeb7d004723942889bd62e869749f02a1dcc036
 $(PKG)_SUBDIR   := $(PKG)-$($(PKG)_VERSION)
 $(PKG)_FILE     := $(PKG)-$($(PKG)_VERSION).tar.xz
 $(PKG)_HOME     := http://download.kde.org/stable/applications

@@ -1,7 +1,7 @@
 # This file is part of MXE. See LICENSE.md for licensing information.
 PKG             := kitemviews
-$(PKG)_VERSION  := 5.50.0
-$(PKG)_CHECKSUM  := c88a91c353d0724c41eef198b65d0eb5889fd2a8a0bc6c5c4e75f6e08adcf071
+$(PKG)_VERSION  := 5.62.0
+$(PKG)_CHECKSUM  := 34881a269bdae7e3643ab73290931859437fde72042a066170e7467422408065
 $(PKG)_SUBDIR   := $(PKG)-$($(PKG)_VERSION)
 $(PKG)_FILE     := $(PKG)-$($(PKG)_VERSION).tar.xz
 $(PKG)_HOME     := https://download.kde.org/stable/frameworks

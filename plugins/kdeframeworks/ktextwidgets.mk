@@ -1,7 +1,7 @@
 # This file is part of MXE. See LICENSE.md for licensing information.
 PKG             := ktextwidgets
-$(PKG)_VERSION  := 5.50.0
-$(PKG)_CHECKSUM  := 3fcab7486ca9d63310721fec2e643046432ce584a7313eae452333113502e1a3
+$(PKG)_VERSION  := 5.62.0
+$(PKG)_CHECKSUM  := ec34931658cbe3a7ad7419a6e588cd9f9981e9b5ab2400e8b6f2b79b29f83774
 $(PKG)_SUBDIR   := $(PKG)-$($(PKG)_VERSION)
 $(PKG)_FILE     := $(PKG)-$($(PKG)_VERSION).tar.xz
 $(PKG)_HOME     := https://download.kde.org/stable/frameworks

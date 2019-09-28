@@ -1,7 +1,7 @@
 # This file is part of MXE. See LICENSE.md for licensing information.
 PKG             := kdecoration
-$(PKG)_VERSION  := 5.14.0
-$(PKG)_CHECKSUM  := f55bc460325a41de58c445a8d10eeecdfd127f3edc3da2b0a0a1d28b3da0f305
+$(PKG)_VERSION  := 5.16.5
+$(PKG)_CHECKSUM  := 2b8c7b7cf114d0eff4ec842009cda264d8cf1254ec4bf65868b6d26f263829bb
 $(PKG)_SUBDIR   := $(PKG)-$($(PKG)_VERSION)
 $(PKG)_FILE     := $(PKG)-$($(PKG)_VERSION).tar.xz
 $(PKG)_HOME     := https://download.kde.org/stable/plasma

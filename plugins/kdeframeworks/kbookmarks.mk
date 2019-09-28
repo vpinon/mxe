@@ -1,7 +1,7 @@
 # This file is part of MXE. See LICENSE.md for licensing information.
 PKG             := kbookmarks
-$(PKG)_VERSION  := 5.50.0
-$(PKG)_CHECKSUM  := c9ebb01a1f37c9791287ea90ed52defa879073ee53a5681709bd4ec959567ad3
+$(PKG)_VERSION  := 5.62.0
+$(PKG)_CHECKSUM  := 69318784fa5feaee3e60bb159fb6c827475a8ce28a74bedf5939ad592c29ea4f
 $(PKG)_SUBDIR   := $(PKG)-$($(PKG)_VERSION)
 $(PKG)_FILE     := $(PKG)-$($(PKG)_VERSION).tar.xz
 $(PKG)_HOME     := https://download.kde.org/stable/frameworks

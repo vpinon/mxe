@@ -1,7 +1,7 @@
 # This file is part of MXE. See LICENSE.md for licensing information.
 PKG             := breeze-icons
-$(PKG)_VERSION  := 5.50.0
-$(PKG)_CHECKSUM  := fc41f8e89af68fb7b91a28dcb43d1f57b238657cf24684c5e98307e033f514fe
+$(PKG)_VERSION  := 5.62.0
+$(PKG)_CHECKSUM  := 5858100f1a87dc865f44cde159aaee025ec46f894f544c75086ea0e8f9555951
 $(PKG)_SUBDIR   := $(PKG)-$($(PKG)_VERSION)
 $(PKG)_FILE     := $(PKG)-$($(PKG)_VERSION).tar.xz
 $(PKG)_HOME     := https://download.kde.org/stable/frameworks

@@ -3,8 +3,8 @@
 # need to symlink host "parsetrigrams" to $(PREFIX)/bin !!!
 
 PKG             := sonnet
-$(PKG)_VERSION  := 5.50.0
-$(PKG)_CHECKSUM  := 0dd49f3d64f97981781c385f4c6c5488ba0e64688435d50b78d8db9d68b9ad8d
+$(PKG)_VERSION  := 5.62.0
+$(PKG)_CHECKSUM  := a1a2d3500d7fc51d94fd6f9d951c83be86436284aeda8416963fc5213956a69a
 $(PKG)_SUBDIR   := $(PKG)-$($(PKG)_VERSION)
 $(PKG)_FILE     := $(PKG)-$($(PKG)_VERSION).tar.xz
 $(PKG)_HOME     := https://download.kde.org/stable/frameworks

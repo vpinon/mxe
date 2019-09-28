@@ -1,7 +1,7 @@
 # This file is part of MXE. See LICENSE.md for licensing information.
 PKG             := kplotting
-$(PKG)_VERSION  := 5.50.0
-$(PKG)_CHECKSUM  := bcf98d1045494aeaa928b71b983adcc0715b96d7c089514e8d5769230846bca3
+$(PKG)_VERSION  := 5.62.0
+$(PKG)_CHECKSUM  := 7472943518a4b0e2fe1877ce47b9f667e178822926985a0efc9c20361097b94e
 $(PKG)_SUBDIR   := $(PKG)-$($(PKG)_VERSION)
 $(PKG)_FILE     := $(PKG)-$($(PKG)_VERSION).tar.xz
 $(PKG)_HOME     := https://download.kde.org/stable/frameworks

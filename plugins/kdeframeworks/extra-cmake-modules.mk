@@ -1,7 +1,7 @@
 # This file is part of MXE. See LICENSE.md for licensing information.
 PKG             := extra-cmake-modules
-$(PKG)_VERSION  := 5.50.0
-$(PKG)_CHECKSUM := dd33b0b09c9659c4e0f49f5ba0caf48ad01534bc3d31788d0793b140cd7e0489
+$(PKG)_VERSION  := 5.62.0
+$(PKG)_CHECKSUM := e07acfecef1b4c7a481a253b58b75072a4f887376301108ed2c753b5002adcd4
 $(PKG)_SUBDIR   := $(PKG)-$($(PKG)_VERSION)
 $(PKG)_FILE     := $(PKG)-$($(PKG)_VERSION).tar.xz
 $(PKG)_HOME     := https://download.kde.org/stable/frameworks

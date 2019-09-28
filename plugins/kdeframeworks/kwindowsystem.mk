@@ -1,7 +1,7 @@
 # This file is part of MXE. See LICENSE.md for licensing information.
 PKG             := kwindowsystem
-$(PKG)_VERSION  := 5.50.0
-$(PKG)_CHECKSUM  := 690b642a6277fda7c429d9dcc44876bf52bccb86e9900f2a349e9e4f2e3cb33e
+$(PKG)_VERSION  := 5.62.0
+$(PKG)_CHECKSUM  := 116d75216ea001b2fc8688a72bcc6105b0b0966a2c5a084497f3aef80d158a67
 $(PKG)_SUBDIR   := $(PKG)-$($(PKG)_VERSION)
 $(PKG)_FILE     := $(PKG)-$($(PKG)_VERSION).tar.xz
 $(PKG)_HOME     := https://download.kde.org/stable/frameworks

@@ -1,7 +1,7 @@
 # This file is part of MXE. See LICENSE.md for licensing information.
 PKG             := kguiaddons
-$(PKG)_VERSION  := 5.50.0
-$(PKG)_CHECKSUM := 07a5dcf9dc124eb3134c32ac7ef983d65434687e0851c23f624856ad6308ffaa
+$(PKG)_VERSION  := 5.62.0
+$(PKG)_CHECKSUM := 5fc61818ed054901a8b1a6a56a83ccaf5f38d9ea7c5761fa6279cd7316d81e44
 $(PKG)_SUBDIR   := $(PKG)-$($(PKG)_VERSION)
 $(PKG)_FILE     := $(PKG)-$($(PKG)_VERSION).tar.xz
 $(PKG)_HOME     := https://download.kde.org/stable/frameworks

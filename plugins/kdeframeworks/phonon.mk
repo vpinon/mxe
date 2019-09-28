@@ -1,7 +1,7 @@
 # This file is part of MXE. See LICENSE.md for licensing information.
 PKG             := phonon
-$(PKG)_VERSION  := 4.10.1
-$(PKG)_CHECKSUM  := e5a98df31aeffc22493afc8d6adbca5d6f0c27cc2eed73b3be05195321e08db7
+$(PKG)_VERSION  := 4.11.1
+$(PKG)_CHECKSUM  := b4431ea2600df8137a717741ad9ebc7f7ec1649fa3e138541d8f42597144de2d
 $(PKG)_SUBDIR   := $(PKG)-$($(PKG)_VERSION)
 $(PKG)_FILE     := $(PKG)-$($(PKG)_VERSION).tar.xz
 $(PKG)_HOME     := https://download.kde.org/stable/phonon
