@@ -20,7 +20,7 @@ define $(PKG)_UPDATE
 endef
 
 define $(PKG)_BUILD
-	$(MAKE) -C '$(1)' distclean
+	# $(MAKE) -C '$(1)' distclean
     cd '$(1)' && \
 	CFLAGS="-I$(PREFIX)/$(TARGET)/include" \
 	PKG_CONFIG_LIBDIR=$(PREFIX)/$(TARGET)/lib/pkgconfig \

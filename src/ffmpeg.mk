@@ -8,9 +8,9 @@ $(PKG)_CHECKSUM := 682a9fa3f6864d7f0dbf224f86b129e337bc60286e0d00dffcd710998d521
 $(PKG)_SUBDIR   := $(PKG)-$($(PKG)_VERSION)
 $(PKG)_FILE     := $(PKG)-$($(PKG)_VERSION).tar.bz2
 $(PKG)_URL      := https://ffmpeg.org/releases/$($(PKG)_FILE)
-$(PKG)_DEPS     := cc bzip2 gnutls lame libass libbluray libbs2b libcaca \
-                   libvpx opencore-amr opus sdl2 speex theora vidstab \
-                   vo-amrwbenc vorbis x264 xvidcore yasm zlib
+$(PKG)_DEPS     := cc bzip2 lame \
+                   libvpx opus sdl2 theora vidstab \
+                   vorbis x264 x265 yasm zlib
 
 # DO NOT ADD fdk-aac OR openssl SUPPORT.
 # Although they are free softwares, their licenses are not compatible with
@@ -37,32 +37,34 @@ define $(PKG)_BUILD
             --disable-static --enable-shared ) \
         --yasmexe='$(TARGET)-yasm' \
         --disable-debug \
-        --disable-pthreads \
-        --enable-w32threads \
+        --enable-pthreads \
+        --disable-w32threads \
         --disable-doc \
-        --enable-avresample \
         --enable-gpl \
         --enable-version3 \
         --extra-libs='-mconsole' \
         --enable-avisynth \
-        --enable-gnutls \
-        --enable-libass \
-        --enable-libbluray \
-        --enable-libbs2b \
-        --enable-libcaca \
+        --disable-gnutls \
+        --disable-libass \
+        --disable-libbluray \
+        --disable-libbs2b \
+        --disable-libcaca \
         --enable-libmp3lame \
-        --enable-libopencore-amrnb \
-        --enable-libopencore-amrwb \
+        --disable-libopencore-amrnb \
+        --disable-libopencore-amrwb \
         --enable-libopus \
-        --enable-libspeex \
+        --disable-libspeex \
         --enable-libtheora \
         --enable-libvidstab \
-        --enable-libvo-amrwbenc \
+        --disable-libvo-amrwbenc \
         --enable-libvorbis \
         --enable-libvpx \
         --enable-libx264 \
-        --enable-libxvid \
+        --enable-libx265 \
+        --disable-libxvid \
         $($(PKG)_CONFIGURE_OPTS)
+	# BRK
     $(MAKE) -C '$(BUILD_DIR)' -j '$(JOBS)'
+	# BRK
     $(MAKE) -C '$(BUILD_DIR)' -j 1 install
 endef

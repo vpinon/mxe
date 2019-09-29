@@ -17,10 +17,10 @@ endef
 define $(PKG)_BUILD
 	cd "$(1)/src/desktoptojson" && \
 		$(BUILD_CXX) -std=c++11 -fPIC \
-		$(shell pkg-config --cflags Qt5Core --libs Qt5Core) \
-		-DBUILDING_DESKTOPTOJSON_TOOL \
+		-DBUILDING_DESKTOPTOJSON_TOOL=1 \
+		main.cpp desktoptojson.cpp ../lib/plugin/desktopfileparser.cpp \
 		-o $(PREFIX)/bin/desktoptojson \
-		main.cpp desktoptojson.cpp ../lib/plugin/desktopfileparser.cpp
+		$(shell pkg-config --cflags Qt5Core --libs Qt5Core)
 
     mkdir "$(1)/build"
     cd "$(1)/build" && cmake .. \

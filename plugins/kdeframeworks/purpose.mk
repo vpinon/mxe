@@ -6,7 +6,7 @@ $(PKG)_SUBDIR   := $(PKG)-$($(PKG)_VERSION)
 $(PKG)_FILE     := $(PKG)-$($(PKG)_VERSION).tar.xz
 $(PKG)_HOME     := https://download.kde.org/stable/frameworks
 $(PKG)_URL      := $($(PKG)_HOME)/$(basename $($(PKG)_VERSION))/$($(PKG)_FILE)
-$(PKG)_DEPS     := qtbase extra-cmake-modules kconfig kcoreaddons ki18n
+$(PKG)_DEPS     := qtbase extra-cmake-modules kconfig kcoreaddons ki18n kirigami2
 
 define $(PKG)_UPDATE
     $(WGET) -q -O- https://download.kde.org/stable/frameworks/ | \

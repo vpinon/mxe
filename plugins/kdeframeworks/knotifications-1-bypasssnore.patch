@@ -1,0 +1,54 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 5551b27..a1ddf17 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -69,12 +69,6 @@ if(APPLE)
+    find_package(Qt5MacExtras ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
+ endif()
+ if (WIN32)
+-    find_package(LibSnoreToast REQUIRED)
+-    set_package_properties(LibSnoreToast PROPERTIES TYPE REQUIRED
+-                            PURPOSE     "for the Windows Toast Notifications"
+-                            DESCRIPTION "A command line application, capable of creating 
+-                                        Windows Toast notifications on Windows (>=)8 "
+-    )
+     find_package(Qt5Network REQUIRED)
+ endif()
+ 
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 2cf268d..6161909 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -39,10 +39,6 @@ if (ANDROID)
+     list(APPEND knotifications_SRCS notifybyandroid.cpp knotifications.qrc)
+ endif()
+ 
+-if (WIN32)
+-  list(APPEND knotifications_SRCS notifybysnore.cpp)
+-endif ()
+-
+ ecm_qt_declare_logging_category(knotifications_SRCS HEADER debug_p.h IDENTIFIER LOG_KNOTIFICATIONS CATEGORY_NAME org.kde.knotifications)
+ 
+ if (Canberra_FOUND)
+diff --git a/src/knotificationmanager.cpp b/src/knotificationmanager.cpp
+index de48bfc..04f6eae 100644
+--- a/src/knotificationmanager.cpp
++++ b/src/knotificationmanager.cpp
+@@ -40,8 +40,6 @@
+ 
+ #if defined(Q_OS_ANDROID)
+ #include "notifybyandroid.h"
+-#elif defined(Q_OS_WIN)
+-#include "notifybysnore.h"
+ #else
+ #include "notifybypopup.h"
+ #include "notifybyportal.h"
+@@ -135,8 +133,6 @@ KNotificationPlugin *KNotificationManager::pluginForAction(const QString &action
+     if (action == QLatin1String("Popup")) {
+ #if defined(Q_OS_ANDROID)
+             plugin = new NotifyByAndroid(this);
+-#elif defined(Q_OS_WIN)
+-            plugin = new NotifyBySnore(this);
+ #else
+             if (d->portalDBusServiceExists) {
+                 plugin = new NotifyByPortal(this);

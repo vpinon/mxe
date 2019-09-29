@@ -7,7 +7,7 @@ $(PKG)_SUBDIR   := $(PKG)-$($(PKG)_VERSION)
 $(PKG)_FILE     := $(PKG)-$($(PKG)_VERSION).tar.xz
 $(PKG)_HOME     := http://download.kde.org/stable/applications
 $(PKG)_URL      := $($(PKG)_HOME)/$($(PKG)_VERSION)/src/$($(PKG)_FILE)
-$(PKG)_DEPS     := \
+$(PKG)_DEPS     := rttr \
 	ffmpeg mlt \
 	qtbase qtdeclarative qtquickcontrols \
 	breeze-icons karchive kconfig kcoreaddons kdbusaddons kguiaddons ki18n kitemviews kplotting kwidgetsaddons \
@@ -32,13 +32,15 @@ define $(PKG)_BUILD
         -DCMAKE_DISABLE_FIND_PACKAGE_LibV4L2=TRUE \
         -DMLT_MELTBIN=./melt.exe \
         -DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
-        -DKDE_L10N_AUTO_TRANSLATIONS=ON
+        -DBUILD_TESTING=OFF
 	$(SED) -i 's,MLT_PREFIX ".*",MLT_PREFIX ".",' "$(1)/build-mxe/config-kdenlive.h"
 	$(SED) -i 's,MLT_MELTBIN=[^ ]*,MLT_MELTBIN=\\"melt.exe\\",' "$(1)/build-mxe/src/CMakeFiles/kdenlive.dir/flags.make"
     $(MAKE) -C "$(1)/build-mxe" -j $(JOBS) install
 	printf "[Rules]\n*.debug=false\norg.kde.multimedia.kdenlive=true\n" > $(PREFIX)/$(TARGET)/bin/qtlogging.ini
 
-    #-DCMAKE_BUILD_TYPE=Debug \
+    # -DCMAKE_BUILD_TYPE=Debug
+    # -DCMAKE_BUILD_TYPE=RelWithDebSymbols \
+	# -DKDE_L10N_AUTO_TRANSLATIONS=ON
 	#cp $(1)/build-mxe/bin/kdenlive.exe $(PREFIX)/kdenlive.debug.exe
 	#$(TARGET)-objcopy --only-keep-debug $(PREFIX)/$(TARGET)/bin/kdenlive.exe $(PREFIX)/$(TARGET)/bin/kdenlive.debug
 	#$(TARGET)-strip --strip-debug --strip-unneeded $(PREFIX)/$(TARGET)/bin/kdenlive.exe

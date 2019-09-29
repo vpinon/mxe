@@ -7,6 +7,7 @@ $(PKG)_FILE     := $(PKG)-$($(PKG)_VERSION).tar.xz
 $(PKG)_HOME     := https://download.kde.org/stable/frameworks
 $(PKG)_URL      := $($(PKG)_HOME)/$(basename $($(PKG)_VERSION))/$($(PKG)_FILE)
 $(PKG)_DEPS     := qtbase extra-cmake-modules kwindowsystem kservice kconfig kiconthemes kcodecs kcoreaddons phonon
+# snoretoast
 
 define $(PKG)_UPDATE
     $(WGET) -q -O- https://download.kde.org/stable/frameworks/ | \
